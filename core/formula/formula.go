@@ -1,5 +1,7 @@
 package formula
 
+import "encoding/json"
+
 // 记录一些计算公式
 
 // CalPERatioOfTheStockMarket 计算股市整体市盈率
@@ -24,11 +26,16 @@ func CalPERatioOfTheStockMarket(depositInterestRate float64, loanInterestRate fl
 // StockMarketPERatioResult 股市整体市盈率计算结果
 type StockMarketPERatioResult struct {
 	// 最低市盈率
-	MinPERatio float64
+	MinPERatio float64 `json:"min_pe_ratio"`
 	// 最高市盈率
-	MaxPERatio float64
+	MaxPERatio float64 `json:"max_pe_ratio"`
 	// 合理市盈率
-	ReasonablePERatio float64
+	ReasonablePERatio float64 `json:"reasonable_pe_ratio"`
+}
+
+func (s *StockMarketPERatioResult) String() string {
+	m, _ := json.Marshal(s)
+	return string(m)
 }
 
 // CalTheValuationOfTheStock 计算单只股票的估值
