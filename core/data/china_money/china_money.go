@@ -1,8 +1,8 @@
 package china_money
 
-type ChinaMoneyData struct {
+type ChinaMoney struct {
 }
 
-func NewChinaMoneyData() *ChinaMoneyData {
-	return &ChinaMoneyData{}
+func NewChinaMoney() *ChinaMoney {
+	return &ChinaMoney{}
 }

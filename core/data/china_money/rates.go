@@ -10,7 +10,7 @@ import (
 )
 
 // GetRatesData 获取利率数据
-func (c *ChinaMoneyData) GetRatesData() (*RatesData, error) {
+func (c *ChinaMoney) GetRatesData() (*RatesData, error) {
 
 	req := map[string]any{
 		"t": time.Now().UnixMilli(),

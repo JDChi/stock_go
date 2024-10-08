@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-func (c *ChinaMoneyData) GetLPRData() (*LPRData, error) {
+func (c *ChinaMoney) GetLPRData() (*LPRData, error) {
 	req := map[string]any{
 		"t": time.Now().UnixMilli(),
 	}

@@ -3,7 +3,7 @@ package china_money
 import "testing"
 
 func TestChinaMoneyData_GetLPRData(t *testing.T) {
-	chinaMoneyData := NewChinaMoneyData()
+	chinaMoneyData := NewChinaMoney()
 	lprData, err := chinaMoneyData.GetLPRData()
 	if err != nil {
 		t.Fatal(err)
