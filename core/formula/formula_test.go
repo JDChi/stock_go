@@ -9,6 +9,6 @@ func TestCalPERatioOfTheStockMarket(t *testing.T) {
 }
 
 func TestCalTheValuationOfTheStock(t *testing.T) {
-	result := CalTheValuationOfTheStock(0.03, 0.5)
+	result := CalTheValuationOfTheStock(0.33, 0.0135)
 	t.Log(result)
 }
