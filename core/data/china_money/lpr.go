@@ -11,10 +11,8 @@ import (
 )
 
 func (c *ChinaMoneyData) GetLPRData() (*LPRData, error) {
-	req := struct {
-		T int64 `json:"t"`
-	}{
-		T: time.Now().UnixMilli(),
+	req := map[string]any{
+		"t": time.Now().UnixMilli(),
 	}
 	reqJson, _ := json.Marshal(req)
 

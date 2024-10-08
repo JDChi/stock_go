@@ -12,10 +12,8 @@ import (
 // GetRatesData 获取利率数据
 func (c *ChinaMoneyData) GetRatesData() (*RatesData, error) {
 
-	req := struct {
-		T int64 `json:"t"`
-	}{
-		T: time.Now().UnixMilli(),
+	req := map[string]any{
+		"t": time.Now().UnixMilli(),
 	}
 	reqJson, _ := json.Marshal(req)
 
